@@ -8,16 +8,37 @@ module.exports = aura(
 		foreground: colours.steel,
 	},
 	{
-		keyword: colours.fuchsia,
-		variable: colours.sky,
+		keyword: { colour: colours.fuchsia, contrast: 5 },
+		variable: {
+			colour: colours.ocean,
+			backgroundContrast: 1,
+		},
 		function: colours.lime,
 		literal: colours.ink,
 		string: {
 			colour: colours.lemon,
-			maximiseContrast: true,
+			contrast: 12,
 		},
-		operator: colours.amber,
+		operator: {
+			colour: colours.amber,
+			contrast: 5,
+		},
 		type: colours.aqua,
-		comment: colours.steel,
+		comment: colours.carbon,
+		whitespace: {
+			foreground: colours.carbon,
+			background: false,
+			contrast: 1.2,
+		},
+		noise: {
+			foreground: colours.carbon,
+			background: false,
+			contrast: 3,
+		},
+		ui: {
+			background: colours.carbon,
+			foreground: false,
+			contrast: 4,
+		},
 	},
 )

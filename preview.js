@@ -1,9 +1,10 @@
-const schemes = require('./aura.js')
+const schemes = require('./themes/aura.js')
 const { meetsContrastGuidelines } = require('polished')
 
 const main = document.querySelector('main')
 
-for (const [type, scheme] of Object.entries(schemes)) {
+for (const type of ['dark', 'light']) {
+	const scheme = schemes[type]
 	const container = document.createElement('div')
 	container.style.background = scheme.main.background
 	container.style.padding = '1ex'
@@ -12,10 +13,13 @@ for (const [type, scheme] of Object.entries(schemes)) {
 
 	for (const [name, { background, foreground }] of Object.entries(scheme)) {
 		const div = document.createElement('div')
-		const { AAA } = meetsContrastGuidelines(foreground, background)
+		const { AAA } = meetsContrastGuidelines(
+			foreground,
+			background || scheme.main.background,
+		)
 		div.innerHTML = name + (AAA ? '✓' : '✗')
 		div.style.color = foreground
-		div.style.background = background
+		background && (div.style.background = background)
 		div.style.display = 'inline-block'
 		div.style.marginRight = '1ex'
 		container.appendChild(div)

@@ -1,18 +1,40 @@
 
-highlight clear
+highlight! clear
 set background=dark
 set t_Co=256
 let g:colors_name = 'aura-dark'
 
-highlight Statement guifg=#ff7ccd guibg=#330020 ctermfg=212 ctermbg=52
-highlight Keyword guifg=#ff7ccd guibg=#330020 ctermfg=212 ctermbg=52
-highlight Exception guifg=#ff7ccd guibg=#330020 ctermfg=212 ctermbg=52
-highlight Function guifg=#bee300 guibg=#2b3300 ctermfg=148 ctermbg=22
-highlight Number guifg=#d1a4ff guibg=#190033 ctermfg=183 ctermbg=17
-highlight Boolean guifg=#d1a4ff guibg=#190033 ctermfg=183 ctermbg=17
-highlight String guifg=#fff7d8 guibg=#332900 ctermfg=230 ctermbg=52
-highlight Operator guifg=#ffb95a guibg=#331d00 ctermfg=215 ctermbg=52
-highlight Type guifg=#00dfc3 guibg=#00332d ctermfg=44 ctermbg=22
-highlight Constant guifg=#00dfc3 guibg=#00332d ctermfg=44 ctermbg=22
-highlight Comment guifg=#c4cbcf guibg=#31393c ctermfg=188 ctermbg=59
-highlight Normal guifg=#eaecee guibg=#1b1b18 ctermfg=195 ctermbg=00
+highlight Statement guifg=#ff4bba ctermfg=205 guibg=#330020 ctermbg=52
+highlight Keyword guifg=#ff4bba ctermfg=205 guibg=#330020 ctermbg=52
+highlight Exception guifg=#ff4bba ctermfg=205 guibg=#330020 ctermbg=52
+highlight StorageClass guifg=#ff4bba ctermfg=205 guibg=#330020 ctermbg=52
+highlight PreProc guifg=#ff4bba ctermfg=205 guibg=#330020 ctermbg=52
+highlight jsFunction guifg=#ff4bba ctermfg=205 guibg=#330020 ctermbg=52
+highlight Identifier guifg=#00cbe2 ctermfg=44 guibg=#002e33 ctermbg=17
+highlight jsFuncCall guifg=#00cbe2 ctermfg=44 guibg=#002e33 ctermbg=17
+highlight jsObjectProp guifg=#00cbe2 ctermfg=44 guibg=#002e33 ctermbg=17
+highlight vimOption guifg=#00cbe2 ctermfg=44 guibg=#002e33 ctermbg=17
+highlight Function guifg=#bee300 ctermfg=148 guibg=#2b3300 ctermbg=22
+highlight Number guifg=#d1a4ff ctermfg=183 guibg=#190033 ctermbg=17
+highlight Boolean guifg=#d1a4ff ctermfg=183 guibg=#190033 ctermbg=17
+highlight String guifg=#ffefad ctermfg=229 guibg=#332900 ctermbg=52
+highlight Operator guifg=#fb9100 ctermfg=208 guibg=#331d00 ctermbg=52
+highlight jsArrowFunction guifg=#fb9100 ctermfg=208 guibg=#331d00 ctermbg=52
+highlight Type guifg=#00dfc3 ctermfg=44 guibg=#00332d ctermbg=22
+highlight Constant guifg=#00dfc3 ctermfg=44 guibg=#00332d ctermbg=22
+highlight Comment guifg=#cccbc5 ctermfg=188 guibg=#3a3833 ctermbg=59
+highlight vimLineComment guifg=#cccbc5 ctermfg=188 guibg=#3a3833 ctermbg=59
+highlight NonText guifg=#3a3833 ctermfg=59 
+highlight Delimiter guifg=#3a3833 ctermfg=59 
+highlight SpecialKey guifg=#3a3833 ctermfg=59 
+highlight LineNr guifg=#777468 ctermfg=101 
+highlight CursorLineNr guifg=#777468 ctermfg=101 
+highlight Noise guifg=#777468 ctermfg=101 
+highlight vimParenSep guifg=#777468 ctermfg=101 
+highlight vimSep guifg=#777468 ctermfg=101 
+highlight vimOperParen guifg=#777468 ctermfg=101 
+highlight vimMapMod guifg=#777468 ctermfg=101 
+highlight CursorLine  guibg=#3a3833 ctermbg=59
+highlight Pmenu  guibg=#3a3833 ctermbg=59
+highlight CursorLineNr  guibg=#3a3833 ctermbg=59
+highlight Normal guifg=#eaecee ctermfg=195 guibg=#1b1b18 ctermbg=00

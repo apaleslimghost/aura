@@ -5,31 +5,53 @@ const mkdirp = require('mkdirp')
 
 const mappings = {
 	main: ['Normal'],
-	keyword: ['Statement', 'Keyword', 'Exception'],
-	variable: [],
+	keyword: [
+		'Statement',
+		'Keyword',
+		'Exception',
+		'StorageClass',
+		'PreProc',
+		'jsFunction',
+	],
+	variable: ['Identifier', 'jsFuncCall', 'jsObjectProp', 'vimOption'],
 	function: ['Function'],
 	literal: ['Number', 'Boolean'],
 	string: ['String'],
-	operator: ['Operator'],
+	operator: ['Operator', 'jsArrowFunction'],
 	type: ['Type', 'Constant'],
-	comment: ['Comment'],
+	comment: ['Comment', 'vimLineComment'],
+	whitespace: ['NonText', 'Delimiter', 'SpecialKey'],
+	noise: [
+		'LineNr',
+		'CursorLineNr',
+		'Noise',
+		'vimParenSep',
+		'vimSep',
+		'vimOperParen',
+		'vimMapMod',
+	],
+	ui: ['CursorLine', 'Pmenu', 'CursorLineNr'],
 }
 
 const renderColour = (colour, name) =>
-	mappings[name].map(
+	(mappings[name] || []).map(
 		highlight =>
-			`highlight ${highlight} guifg=${colour.foreground} guibg=${
+			`highlight ${highlight} ${
+				colour.foreground
+					? `guifg=${colour.foreground} ctermfg=${hex2xterm(colour.foreground)}`
+					: ''
+			} ${
 				colour.background
-			} ctermfg=${hex2xterm(colour.foreground)} ctermbg=${hex2xterm(
-				colour.background,
-			)}`,
+					? `guibg=${colour.background} ctermbg=${hex2xterm(colour.background)}`
+					: ''
+			}`,
 	)
 
 const renderColours = colours =>
 	Object.keys(colours).flatMap(name => renderColour(colours[name], name))
 
 const renderFile = (name, colours, dark) => `
-highlight clear
+highlight! clear
 set background=${dark ? 'dark' : 'light'}
 set t_Co=256
 let g:colors_name = '${kebabCase(name)}-${dark ? 'dark' : 'light'}'
