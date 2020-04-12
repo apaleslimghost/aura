@@ -24,6 +24,7 @@ highlight Type guifg=#00dfc3 ctermfg=44 guibg=#00332d ctermbg=22
 highlight Constant guifg=#00dfc3 ctermfg=44 guibg=#00332d ctermbg=22
 highlight Comment guifg=#cccbc5 ctermfg=188 guibg=#3a3833 ctermbg=59
 highlight vimLineComment guifg=#cccbc5 ctermfg=188 guibg=#3a3833 ctermbg=59
+highlight CursorLineNr guifg=#cccbc5 ctermfg=188 guibg=#3a3833 ctermbg=59
 highlight NonText guifg=#3a3833 ctermfg=59 
 highlight Delimiter guifg=#3a3833 ctermfg=59 
 highlight SpecialKey guifg=#3a3833 ctermfg=59 
@@ -37,6 +38,5 @@ highlight vimMapMod guifg=#777468 ctermfg=101
 highlight htmlTagN guifg=#777468 ctermfg=101 
 highlight CursorLine  guibg=#3a3833 ctermbg=59
 highlight Pmenu  guibg=#3a3833 ctermbg=59
-highlight CursorLineNr  guibg=#3a3833 ctermbg=59
 highlight VertSplit  guibg=#3a3833 ctermbg=59
 highlight Normal guifg=#eaecee ctermfg=195 guibg=#1b1b18 ctermbg=00

@@ -19,7 +19,7 @@ const mappings = {
 	string: ['String'],
 	operator: ['Operator', 'jsArrowFunction'],
 	type: ['Type', 'Constant'],
-	comment: ['Comment', 'vimLineComment'],
+	comment: ['Comment', 'vimLineComment', 'CursorLineNr'],
 	whitespace: ['NonText', 'Delimiter', 'SpecialKey'],
 	noise: [
 		'LineNr',
@@ -31,7 +31,7 @@ const mappings = {
 		'vimMapMod',
 		'htmlTagN',
 	],
-	ui: ['CursorLine', 'Pmenu', 'CursorLineNr', 'VertSplit'],
+	ui: ['CursorLine', 'Pmenu', 'VertSplit'],
 }
 
 const renderColour = (colour, name) =>
