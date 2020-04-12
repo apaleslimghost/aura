@@ -1,17 +1,18 @@
 const kebabCase = require('kebab-case')
 const { hex2xterm } = require('color2xterm')
 const fs = require('fs')
+const mkdirp = require('mkdirp')
 
 const mappings = {
 	main: ['Normal'],
-	keyword: [],
+	keyword: ['Statement', 'Keyword', 'Exception'],
 	variable: [],
-	function: [],
-	literal: [],
-	string: [],
-	operator: [],
-	type: [],
-	comment: [],
+	function: ['Function'],
+	literal: ['Number', 'Boolean'],
+	string: ['String'],
+	operator: ['Operator'],
+	type: ['Type', 'Constant'],
+	comment: ['Comment'],
 }
 
 const renderColour = (colour, name) =>
@@ -37,7 +38,7 @@ ${renderColours(colours).join('\n')}
 `
 
 module.exports = scheme => {
-	fs.mkdirSync('colors')
+	mkdirp.sync('colors')
 	fs.writeFileSync(
 		`colors/${kebabCase(scheme.name)}-dark.vim`,
 		renderFile(scheme.name, scheme.dark, true),
