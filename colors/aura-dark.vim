@@ -34,6 +34,7 @@ highlight vimParenSep guifg=#777468 ctermfg=101
 highlight vimSep guifg=#777468 ctermfg=101 
 highlight vimOperParen guifg=#777468 ctermfg=101 
 highlight vimMapMod guifg=#777468 ctermfg=101 
+highlight htmlTagN guifg=#777468 ctermfg=101 
 highlight CursorLine  guibg=#3a3833 ctermbg=59
 highlight Pmenu  guibg=#3a3833 ctermbg=59
 highlight CursorLineNr  guibg=#3a3833 ctermbg=59

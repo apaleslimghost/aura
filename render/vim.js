@@ -29,6 +29,7 @@ const mappings = {
 		'vimSep',
 		'vimOperParen',
 		'vimMapMod',
+		'htmlTagN',
 	],
 	ui: ['CursorLine', 'Pmenu', 'CursorLineNr'],
 }
