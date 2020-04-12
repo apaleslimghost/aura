@@ -31,7 +31,7 @@ const mappings = {
 		'vimMapMod',
 		'htmlTagN',
 	],
-	ui: ['CursorLine', 'Pmenu', 'CursorLineNr'],
+	ui: ['CursorLine', 'Pmenu', 'CursorLineNr', 'VertSplit'],
 }
 
 const renderColour = (colour, name) =>

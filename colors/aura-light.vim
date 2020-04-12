@@ -38,4 +38,5 @@ highlight htmlTagN guifg=#777468 ctermfg=101
 highlight CursorLine  guibg=#dddcd8 ctermbg=188
 highlight Pmenu  guibg=#dddcd8 ctermbg=188
 highlight CursorLineNr  guibg=#dddcd8 ctermbg=188
+highlight VertSplit  guibg=#dddcd8 ctermbg=188
 highlight Normal guifg=#171a1c ctermfg=00 guibg=#edecea ctermbg=230
