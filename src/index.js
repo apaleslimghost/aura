@@ -49,12 +49,13 @@ function getDark(colour, baseBackground) {
 }
 
 module.exports = (base, scheme) => {
-	const lightBackground = (base.background || base).lightest
-	const darkBackground = (base.background || base).darkest
-	const lightForeground = (base.foreground || base).darkest
-	const darkForeground = (base.foreground || base).lightest
+	const lightBackground = base.background.lightest
+	const darkBackground = base.background.darkest
+	const lightForeground = base.foreground.darkest
+	const darkForeground = base.foreground.lightest
 
 	return {
+		...base,
 		dark: {
 			...mapValues(scheme, colour => getDark(colour, darkBackground)),
 			main: {

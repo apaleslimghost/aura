@@ -1,8 +1,9 @@
-const aura = require('./')
+const aura = require('../')
 const colours = require('@apaleslimghost/colours')
 
 module.exports = aura(
 	{
+		name: 'aura',
 		background: colours.carbon,
 		foreground: colours.steel,
 	},

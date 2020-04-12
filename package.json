@@ -2,9 +2,11 @@
 	"name": "aura",
 	"version": "1.0.0",
 	"description": "editor colour scheme framework",
-	"main": "index.js",
+	"main": "src/index.js",
 	"dependencies": {
-		"@apaleslimghost/colours": "^1.1.0"
+		"@apaleslimghost/colours": "^1.1.0",
+		"color2xterm": "^1.0.0",
+		"kebab-case": "^1.0.0"
 	},
 	"devDependencies": {
 		"husky": "^2.3.0",
