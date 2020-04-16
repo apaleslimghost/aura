@@ -34,6 +34,8 @@ const mappings = {
 	ui: ['CursorLine', 'Pmenu', 'VertSplit'],
 }
 
+const attributeMappings = {}
+
 const renderColour = (colour, name) =>
 	(mappings[name] || []).map(
 		highlight =>
@@ -45,6 +47,14 @@ const renderColour = (colour, name) =>
 				colour.background
 					? `guibg=${colour.background} ctermbg=${hex2xterm(colour.background)}`
 					: ''
+			} cterm=${
+				highlight in attributeMappings
+					? attributeMappings[highlight].join(',')
+					: 'none'
+			} gui=${
+				highlight in attributeMappings
+					? attributeMappings[highlight].join(',')
+					: 'none'
 			}`,
 	)
 
