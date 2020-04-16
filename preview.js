@@ -1,5 +1,7 @@
+// eslint-env browser
+
 const schemes = require('./themes/aura.js')
-const { meetsContrastGuidelines } = require('polished')
+const { meetsContrastGuidelines, readableColor } = require('polished')
 
 const main = document.querySelector('main')
 
@@ -14,11 +16,12 @@ for (const type of ['dark', 'light']) {
 	for (const [name, { background, foreground }] of Object.entries(scheme)) {
 		const div = document.createElement('div')
 		const { AAA } = meetsContrastGuidelines(
-			foreground,
+			foreground || readableColor(background || scheme.main.background),
 			background || scheme.main.background,
 		)
 		div.innerHTML = name + (AAA ? '✓' : '✗')
-		div.style.color = foreground
+		div.style.color =
+			foreground || readableColor(background || scheme.main.background)
 		background && (div.style.background = background)
 		div.style.display = 'inline-block'
 		div.style.marginRight = '1ex'
