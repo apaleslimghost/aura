@@ -14,7 +14,10 @@ module.exports = aura(
 			backgroundContrast: 1,
 		},
 		function: colours.lime,
-		literal: colours.ink,
+		literal: {
+			colour: colours.ink,
+			backgroundContrast: 1.15,
+		},
 		string: {
 			colour: colours.lemon,
 			contrast: 12,
